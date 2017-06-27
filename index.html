@@ -31,7 +31,7 @@
 
           d3.select("body")
             .append("h2")
-            .text("World Cup Attendance")
+            .text("Norwegian Yearly Total Production")
 
           var svg = d3.select("body")
             .append("svg")
@@ -45,11 +45,11 @@
       */
 
           var myChart = new dimple.chart(svg, data);
-          var x = myChart.addTimeAxis("x", "year"); 
-          myChart.addMeasureAxis("y", "attendance");
+          var x = myChart.addTimeAxis("x", "prfyear"); 
+          myChart.addMeasureAxis("y", "prfOeNetMillSm3");
           x.dateParseFormat = "%Y";
           x.tickFormat = "%Y";
-          x.timeInterval = 4;
+          x.timeInterval = 1;
           myChart.addSeries(null, dimple.plot.line);
           myChart.addSeries(null, dimple.plot.scatter);
           myChart.draw();
