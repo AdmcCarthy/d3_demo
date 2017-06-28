@@ -2,22 +2,16 @@
 d3 demo
 =======
 
--------
-Summary
--------
+A simple demonstration of d3.
 
-------
-Design
-------
-
---------
-Feedback
---------
-
----------
-Resources
----------
+Produces a chart showing resource production on the Norwegian North Sea over time.
 
 ---------------
 Getting started
 ---------------
+
+Clone the repository then open it with a local server.
+
+::
+
+    $ python -m http.server
