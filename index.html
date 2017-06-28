@@ -27,8 +27,6 @@
               width = 1400 - margin,
               height = 600 - margin;
 
-          debugger;
-
           d3.select("body")
             .append("h2")
             .text("Norwegian Yearly Total Production")
@@ -45,13 +43,16 @@
       */
 
           var myChart = new dimple.chart(svg, data);
-          var x = myChart.addTimeAxis("x", "prfyear"); 
-          myChart.addMeasureAxis("y", "prfOeNetMillSm3");
+          var x = myChart.addTimeAxis("x", "prfYear"); 
+          myChart.addMeasureAxis("y", "prfPrdOeNetMillSm3");
           x.dateParseFormat = "%Y";
           x.tickFormat = "%Y";
           x.timeInterval = 1;
           myChart.addSeries(null, dimple.plot.line);
           myChart.addSeries(null, dimple.plot.scatter);
+
+          debugger;
+
           myChart.draw();
         };
 
